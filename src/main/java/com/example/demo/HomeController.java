@@ -19,9 +19,9 @@ public class HomeController {
    */
 
   @RequestMapping("/home")
-  public String get(@RequestParam("name") @Nullable String name, Model model) {
+  public String get(@RequestParam("search_name") @Nullable String name, Model model) {
     
-    model.addAttribute("name", name);
+    model.addAttribute("search_name", name);
     
     return "home";
   }
