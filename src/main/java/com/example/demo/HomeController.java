@@ -18,11 +18,11 @@ public class HomeController {
    * @return テンプレートのHTML
    */
 
-  @RequestMapping("/home")
-  public String get(@RequestParam("search_name") @Nullable String name, Model model) {
+  @RequestMapping("/submt")
+  public String get(@RequestParam("username") @Nullable String username, Model model) {
     
-    model.addAttribute("search_name", name);
+    model.addAttribute("username", username);
     
-    return "home";
+    return "result";
   }
 }

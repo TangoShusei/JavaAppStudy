@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="jp" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>こんにちは！</title>
+</head>
+<body>
+  <div th:if="${username} != null" >
+    <span th:text="'こんにちは、' + ${username} + 'さん！'"></span>
+  </div>
+  <div th:unless="${username} != null" >
+    <span th:text="'名前が入力されませんでした、再度やりなおしてください。'"></span>
+  </div>
+</body>
+</html>
