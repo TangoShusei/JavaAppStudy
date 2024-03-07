@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 @SpringBootApplication
 public class DemoApplication extends SpringBootServletInitializer {
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(DemoApplication.class);
-	}
+  @Override
+  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+    return application.sources(DemoApplication.class);
+  }
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(DemoApplication.class, args);
+  }
 
-	@GetMapping("/")
-	public String helloWorld() {
-		return "index";
-	}
+  @GetMapping("/")
+  public String helloWorld() {
+    return "index";
+  }
 }
