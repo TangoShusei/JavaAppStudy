@@ -9,7 +9,7 @@
     <span th:text="'こんにちは、' + ${name} + 'さん！'"></span>
   </div>
   <div th:unless="${name} != null" >
-    <span th:text="'こんにちは、' + ${name} + 'さん！'"></span>
+    <span th:text="'名前が入力されていません！'"></span>
   </div>
 </body>
 </html>
