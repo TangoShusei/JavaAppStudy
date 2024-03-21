@@ -9,19 +9,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @SpringBootApplication
-public class DemoApplication extends SpringBootServletInitializer {
+public class IndexController extends SpringBootServletInitializer {
 
   @Override
   protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-    return application.sources(DemoApplication.class);
+    return application.sources(IndexController.class);
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
+    SpringApplication.run(IndexController.class, args);
   }
 
   @GetMapping("/")
-  public String helloWorld() {
+  public String searchTop() {
     return "index";
   }
 }
